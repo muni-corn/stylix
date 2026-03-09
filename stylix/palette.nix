@@ -198,10 +198,13 @@ in
           default =
             builtins.mapAttrs
               (
+                _: color:
                 let
-                  inherit (lib.importJSON cfg.generated.json) colors;
+                  json = lib.importJSON cfg.generated.json;
+                  colors =
+                    if lib.strings.hasPrefix "base0" color then json.base16 else json.colors;
                 in
-                _: color: colors.${color}.${cfg.colorGeneration.polarity}
+                colors.${color}.${cfg.colorGeneration.polarity}
               )
               (
                 if cfg.colorGeneration.polarity == "dark" then
@@ -215,15 +218,14 @@ in
                     base06 = "secondary_fixed";
                     base07 = "primary";
                     base08 = "error";
-                    base09 = "tertiary";
-                    base0A = "secondary";
-                    base0B = "primary";
-                    base0C = "primary_fixed";
-                    base0D = "surface_tint";
-                    base0E = "tertiary_fixed";
-                    base0F = "on_error_container";
+                    base09 = "base09";
+                    base0A = "base0a";
+                    base0B = "base0b";
+                    base0C = "base0c";
+                    base0D = "base0d";
+                    base0E = "base0e";
+                    base0F = "base0f";
                   }
-
                 else
                   {
                     base00 = "surface";
@@ -235,13 +237,13 @@ in
                     base06 = "tertiary_container";
                     base07 = "on_primary_fixed_variant";
                     base08 = "error";
-                    base09 = "tertiary";
-                    base0A = "secondary";
-                    base0B = "primary";
-                    base0C = "primary_container";
-                    base0D = "surface_tint";
-                    base0E = "secondary_fixed_dim";
-                    base0F = "inverse_surface";
+                    base09 = "base09";
+                    base0A = "base0a";
+                    base0B = "base0b";
+                    base0C = "base0c";
+                    base0D = "base0d";
+                    base0E = "base0e";
+                    base0F = "base0f";
                   }
               );
         }
