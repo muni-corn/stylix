@@ -207,46 +207,24 @@ in
                 in
                 colors.${color}.${cfg.colorGeneration.polarity}
               )
-              (
-                if cfg.colorGeneration.polarity == "dark" then
-                  {
-                    base00 = "surface_container_lowest";
-                    base01 = "surface_container";
-                    base02 = "surface_container_highest";
-                    base03 = "outline";
-                    base04 = "on_surface_variant";
-                    base05 = "on_surface";
-                    base06 = "secondary_fixed";
-                    base07 = "primary";
-                    base08 = "error";
-                    base09 = "base09";
-                    base0A = "base0a";
-                    base0B = "base0b";
-                    base0C = "base0c";
-                    base0D = "base0d";
-                    base0E = "base0e";
-                    base0F = "base0f";
-                  }
-                else
-                  {
-                    base00 = "surface";
-                    base01 = "surface_container";
-                    base02 = "surface_container_highest";
-                    base03 = "outline";
-                    base04 = "on_surface_variant";
-                    base05 = "on_surface";
-                    base06 = "tertiary_container";
-                    base07 = "on_primary_fixed_variant";
-                    base08 = "error";
-                    base09 = "base09";
-                    base0A = "base0a";
-                    base0B = "base0b";
-                    base0C = "base0c";
-                    base0D = "base0d";
-                    base0E = "base0e";
-                    base0F = "base0f";
-                  }
-              );
+              {
+                base00 = "base00";
+                base01 = "base01";
+                base02 = "base02";
+                base03 = "base03";
+                base04 = "base04";
+                base05 = "base05";
+                base06 = "base06";
+                base07 = "base07";
+                base08 = "base08";
+                base09 = "base09";
+                base0A = "base0a";
+                base0B = "base0b";
+                base0C = "base0c";
+                base0D = "base0d";
+                base0E = "base0e";
+                base0F = "base0f";
+              };
         }
         // {
           author = "Stylix";
