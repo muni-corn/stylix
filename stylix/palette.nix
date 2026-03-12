@@ -183,6 +183,7 @@ in
                 --mode "$POLARITY" \
                 --resize-filter "$FILTER" \
                 --type "$SCHEME" \
+                --source-color-index 0 \
                 image \
                 "$IMAGE" |
                 sed -E 's/"image":[[:space:]]*"[^"]*",?//g' \
