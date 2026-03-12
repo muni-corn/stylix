@@ -205,7 +205,7 @@ in
                   colors =
                     if lib.strings.hasPrefix "base0" color then json.base16 else json.colors;
                 in
-                colors.${color}.${cfg.colorGeneration.polarity}
+                colors.${color}.${cfg.colorGeneration.polarity}.color
               )
               {
                 base00 = "base00";
